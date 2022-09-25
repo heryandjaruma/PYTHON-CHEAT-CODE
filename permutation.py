@@ -5,7 +5,6 @@ def get_permutation_indexing(start_num:int, end_num:int): # IMPLICIT
     combination = np.array(np.meshgrid(listed, listed)).T.reshape(-1,2)
     combination = np.sort(combination)
     combination = np.unique(combination, axis = 0)
-    remove = np.array([listed, listed]).T.reshape(-1,2)
     combination = [item for item in combination if item[0] != item[1]]
     return combination
 
